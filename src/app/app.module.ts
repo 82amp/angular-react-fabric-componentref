@@ -1,16 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { AngularReactBrowserModule } from '@angular-react/core';
 import { NgModule } from '@angular/core';
+import { FabDetailsListModule } from '@angular-react/fabric';
 
 import { AppComponent } from './app.component';
+import { TemplateComponent } from './template.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TemplateComponent
   ],
   imports: [
-    BrowserModule
+    AngularReactBrowserModule,
+    FabDetailsListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TemplateComponent]
 })
 export class AppModule { }
